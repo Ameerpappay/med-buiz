@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>identals | Dental Supplies & Medical Equipment Dealer</title>
+
+    <!-- Primary Meta Tags -->
+    <meta
+      name="title"
+      content="identals | Dental Supplies & Medical Equipment Dealer"
+    />
+    <meta
+      name="description"
+      content="Authorized supplier of premium dental materials, restorative composites, endodontic files, impression materials, and clinical consumables for dental clinics and hospitals."
+    />
+    <meta
+      name="keywords"
+      content="identals, dental materials, dental equipment, medical supplies, endodontic files, dental composites, clinical consumables, B2B medical supply"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Preview -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="identals - Precision Dental Materials & Medical Supplies"
+    />
+    <meta
+      property="og:description"
+      content="Reliable supplier for dental clinics and medical facilities. Request bulk quotes and product specs online."
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                800: "#1E3A8A",
+                900: "#0F4C81",
+                950: "#0A2540",
+              },
+              teal: {
+                400: "#2DD4BF",
+                500: "#0D9488",
+                600: "#0F766E",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="bg-slate-50 text-slate-800 antialiased font-sans overflow-x-hidden"
+  >
+    <!-- Header / Navigation -->
+    <header
+      class="sticky top-0 z-40 bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200/80 transition-all"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div
+            class="w-10 h-10 bg-gradient-to-tr from-navy-900 to-teal-500 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-md group-hover:scale-105 transition-all"
+          >
+            i
+          </div>
+          <span class="text-2xl font-black tracking-tight text-navy-950"
+            >identals<span class="text-teal-500">.</span></span
+          >
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm"
+        >
+          <a href="#home" class="hover:text-navy-900 transition-colors">Home</a>
+          <a href="#catalog" class="hover:text-navy-900 transition-colors"
+            >Dental Catalog</a
+          >
+          <a href="#specialties" class="hover:text-navy-900 transition-colors"
+            >Medical Divisions</a
+          >
+          <a href="#about" class="hover:text-navy-900 transition-colors"
+            >About Us</a
+          >
+          <a href="#contact" class="hover:text-navy-900 transition-colors"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Actions -->
+        <div class="hidden md:flex items-center gap-4">
+          <a
+            href="https://wa.me/1234567890"
+            target="_blank"
+            class="flex items-center gap-2 text-slate-600 hover:text-emerald-600 font-semibold text-sm transition-colors"
+          >
+            <i class="fa-brands fa-whatsapp text-lg text-emerald-500"></i>
+            WhatsApp
+          </a>
+          <button
+            onclick="openInquiryModal()"
+            class="bg-gradient-to-r from-navy-900 to-teal-600 hover:from-navy-800 hover:to-teal-500 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-md shadow-navy-900/10 hover:shadow-lg hover:shadow-teal-500/20 active:scale-95"
+          >
+            Request a Quote
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-slate-700 text-2xl focus:outline-none p-2"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white/95 backdrop-blur-lg border-b border-slate-200 px-4 pt-2 pb-6 space-y-4"
+      >
+        <a
+          href="#home"
+          class="block text-slate-700 hover:text-navy-900 py-1 font-medium"
+          >Home</a
+        >
+        <a
+          href="#catalog"
+          class="block text-slate-700 hover:text-navy-900 py-1 font-medium"
+          >Dental Catalog</a
+        >
+        <a
+          href="#specialties"
+          class="block text-slate-700 hover:text-navy-900 py-1 font-medium"
+          >Medical Divisions</a
+        >
+        <a
+          href="#about"
+          class="block text-slate-700 hover:text-navy-900 py-1 font-medium"
+          >About Us</a
+        >
+        <a
+          href="#contact"
+          class="block text-slate-700 hover:text-navy-900 py-1 font-medium"
+          >Contact</a
+        >
+        <div class="pt-2 border-t border-slate-100 flex flex-col gap-3">
+          <a
+            href="https://wa.me/1234567890"
+            target="_blank"
+            class="flex items-center justify-center gap-2 text-emerald-600 font-medium py-2.5 border border-emerald-500/30 bg-emerald-50/50 rounded-xl"
+          >
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+          </a>
+          <button
+            onclick="openInquiryModal()"
+            class="w-full bg-navy-900 text-white py-3 rounded-xl font-semibold"
+          >
+            Request a Quote
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative bg-gradient-to-b from-slate-100 via-slate-50 to-white py-20 lg:py-28 overflow-hidden"
+    >
+      <!-- Glowing Background Orbs -->
+      <div
+        class="absolute -top-24 -left-24 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-1/2 -right-24 w-96 h-96 bg-navy-800/15 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-700 text-xs font-bold tracking-wide uppercase shadow-sm"
+            >
+              <i class="fa-solid fa-shield-halved text-teal-600"></i> Certified
+              Quality Medical Supplies
+            </div>
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]"
+            >
+              Precision Dental Materials Today. <br class="hidden sm:inline" />
+              <span
+                class="bg-gradient-to-r from-navy-900 via-navy-800 to-teal-600 bg-clip-text text-transparent"
+                >Comprehensive Medical Solutions.</span
+              >
+            </h1>
+            <p
+              class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            >
+              Partnering with clinics, dental practices, and healthcare
+              institutions to provide reliable equipment, premium consumables,
+              and certified clinical supplies.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-3"
+            >
+              <a
+                href="#catalog"
+                class="bg-gradient-to-r from-navy-900 to-teal-600 hover:from-navy-800 hover:to-teal-500 text-white px-8 py-4 rounded-xl font-bold text-base transition-all text-center shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30 hover:-translate-y-0.5"
+              >
+                Browse Dental Catalog
+              </a>
+              <button
+                onclick="openInquiryModal()"
+                class="bg-white text-slate-700 border border-slate-300 hover:border-navy-900 hover:text-navy-900 px-8 py-4 rounded-xl font-bold text-base transition-all text-center shadow-sm hover:shadow"
+              >
+                Request Bulk Quote
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Visual Card with Glassmorphic Floating Pill Badges -->
+          <div class="lg:col-span-5 relative">
+            <!-- Floating Pill Badge 1 -->
+            <div
+              class="absolute -top-6 -left-6 z-20 bg-white/90 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce-slow hidden sm:flex"
+            >
+              <div
+                class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold"
+              >
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div>
+                <p class="text-xs font-bold text-slate-900">100% Genuine</p>
+                <p class="text-[10px] text-slate-500">Certified Brands</p>
+              </div>
+            </div>
+
+            <!-- Main Form Card -->
+            <div
+              class="bg-white p-8 rounded-3xl shadow-2xl border border-slate-200/80 relative z-10"
+            >
+              <div class="flex items-center justify-between mb-6">
+                <div>
+                  <h3 class="text-xl font-extrabold text-navy-950">
+                    Quick Procurement Inquiry
+                  </h3>
+                  <p class="text-xs text-slate-500 mt-0.5">
+                    Get direct pricing for your clinic needs
+                  </p>
+                </div>
+                <div
+                  class="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-lg font-bold shadow-inner"
+                >
+                  <i class="fa-solid fa-tooth"></i>
+                </div>
+              </div>
+
+              <form onsubmit="handleQuickInquiry(event)" class="space-y-4">
+                <div>
+                  <label
+                    class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1"
+                    >Clinic / Doctor Name</label
+                  >
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Smile Dental Care"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-navy-900 focus:border-navy-900 focus:outline-none transition-all"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1"
+                    >Contact Number</label
+                  >
+                  <input
+                    type="tel"
+                    required
+                    placeholder="+1 (555) 000-0000"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-navy-900 focus:border-navy-900 focus:outline-none transition-all"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1"
+                    >Required Items</label
+                  >
+                  <textarea
+                    rows="3"
+                    required
+                    placeholder="List dental composites, impression trays, endo files..."
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-navy-900 focus:border-navy-900 focus:outline-none transition-all"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3.5 rounded-xl text-sm transition-all shadow-md shadow-teal-500/20 active:scale-98"
+                >
+                  Submit Requirement
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Features Bar -->
+    <section class="bg-white border-y border-slate-200/80 py-10 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">
+                Certified Quality
+              </h4>
+              <p class="text-xs text-slate-500">ISO & Regulatory Compliant</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">
+                Reliable Delivery
+              </h4>
+              <p class="text-xs text-slate-500">Fast local supply chain</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-box-archive"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Genuine Brands</h4>
+              <p class="text-xs text-slate-500">100% authentic materials</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 group">
+            <div
+              class="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 text-teal-600 flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">
+                Institutional Rates
+              </h4>
+              <p class="text-xs text-slate-500">Bulk pricing for clinics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dental Product Catalog Showcase -->
+    <section
+      id="catalog"
+      class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"
+    >
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
+      >
+        <div>
+          <span
+            class="text-teal-600 font-extrabold text-xs uppercase tracking-wider bg-teal-50 border border-teal-200 px-3 py-1 rounded-full"
+            >Current Highlight</span
+          >
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3">
+            Dental Supplies Catalog
+          </h2>
+          <p class="text-slate-600 text-sm mt-2 max-w-xl">
+            Browse our specialized inventory of dental consumables and
+            equipment. Contact us for detailed pricing and availability.
+          </p>
+        </div>
+        <!-- Search & Filter Controls -->
+        <div class="flex flex-wrap gap-3">
+          <div class="relative">
+            <input
+              type="text"
+              id="search-input"
+              onkeyup="filterProducts()"
+              placeholder="Search materials..."
+              class="pl-10 pr-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-transparent bg-white shadow-sm"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"
+            ></i>
+          </div>
+          <select
+            id="category-filter"
+            onchange="filterProducts()"
+            class="px-4 py-2.5 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 bg-white shadow-sm font-medium text-slate-700"
+          >
+            <option value="all">All Dental Categories</option>
+            <option value="restorative">Restorative Materials</option>
+            <option value="endodontic">Endodontics</option>
+            <option value="impression">Impression Supplies</option>
+            <option value="disposables">Clinical Disposables</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Product Grid Population Target -->
+      <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </section>
+
+    <!-- Future Medical Specialties Expansion Teaser -->
+    <section
+      id="specialties"
+      class="bg-navy-950 text-white py-24 relative overflow-hidden"
+    >
+      <!-- Accent Glows -->
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-navy-800/30 rounded-full blur-3xl pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-teal-400 font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-teal-400/10 border border-teal-400/20"
+            >Expanding Vision</span
+          >
+          <h2 class="text-3xl sm:text-4xl font-black mt-3">
+            Comprehensive Medical Equipment Divisions
+          </h2>
+          <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+            While dental materials lead our current catalog, identals is scaling
+            to serve broader clinical and hospital supply needs.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Division 1 -->
+          <div
+            class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-md hover:border-teal-500/40 transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-teal-500/20 border border-teal-500/30 text-teal-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-hospital"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Hospital Furniture & Care
+            </h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+              Patient beds, exam tables, OT lights, and ergonomic hospital room
+              infrastructure.
+            </p>
+            <span
+              class="inline-block bg-teal-500/20 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full border border-teal-500/30"
+              >Coming Soon</span
+            >
+          </div>
+
+          <!-- Division 2 -->
+          <div
+            class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-md hover:border-teal-500/40 transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-teal-500/20 border border-teal-500/30 text-teal-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-scalpel"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Surgical Instruments
+            </h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+              Precision stainless steel instruments for general surgery,
+              orthopedic, and specialized care.
+            </p>
+            <span
+              class="inline-block bg-teal-500/20 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full border border-teal-500/30"
+              >Coming Soon</span
+            >
+          </div>
+
+          <!-- Division 3 -->
+          <div
+            class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-md hover:border-teal-500/40 transition-all hover:-translate-y-1 group"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-teal-500/20 border border-teal-500/30 text-teal-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-microscope"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-white">
+              Diagnostic Devices
+            </h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+              Autoclaves, diagnostic monitors, sterilization units, and clinical
+              testing equipment.
+            </p>
+            <span
+              class="inline-block bg-teal-500/20 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full border border-teal-500/30"
+              >Coming Soon</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span
+            class="text-teal-600 font-extrabold text-xs uppercase tracking-wider bg-teal-50 border border-teal-200 px-3 py-1 rounded-full"
+            >About identals</span
+          >
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-6">
+            Your Trusted Partner in Medical & Clinical Supplies
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">
+            Founded with a commitment to quality and medical precision,
+            <strong class="text-slate-900">identals</strong> serves as a
+            reliable supply link for healthcare practices. We specialize in
+            providing verified dental consumables and essential healthcare tools
+            directly to practitioners.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Our platform simplifies medical procurement. Whether you are
+            stocking a single dental operatory or managing bulk supplies for a
+            multi-specialty clinic, we ensure authentic product origin,
+            compliant storage, and prompt delivery.
+          </p>
+          <div class="grid grid-cols-2 gap-6 border-t border-slate-200 pt-6">
+            <div>
+              <h4 class="text-3xl font-black text-navy-950">100%</h4>
+              <p class="text-xs font-medium text-slate-500 mt-1">
+                Verified Authentic Supplies
+              </p>
+            </div>
+            <div>
+              <h4 class="text-3xl font-black text-navy-950">B2B</h4>
+              <p class="text-xs font-medium text-slate-500 mt-1">
+                Institutional Wholesale Pricing
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-gradient-to-br from-slate-100 to-slate-200/70 rounded-3xl p-10 border border-slate-200 text-center relative overflow-hidden shadow-inner"
+        >
+          <div
+            class="w-20 h-20 bg-white rounded-3xl flex items-center justify-center text-navy-900 text-3xl mx-auto mb-6 shadow-md"
+          >
+            <i class="fa-solid fa-building-circle-check"></i>
+          </div>
+          <h3 class="text-2xl font-black text-slate-900 mb-2">
+            Institutional Sales & Procurement
+          </h3>
+          <p class="text-sm text-slate-600 mb-8 max-w-md mx-auto">
+            Are you a hospital administrator or clinic manager needing bulk
+            supply contracts?
+          </p>
+          <button
+            onclick="openInquiryModal()"
+            class="bg-navy-900 hover:bg-teal-600 text-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all shadow-md"
+          >
+            Contact Procurement Team
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Lead Capture Section -->
+    <section
+      id="contact"
+      class="bg-slate-100/80 py-24 border-t border-slate-200/80"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="max-w-3xl mx-auto bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200/80"
+        >
+          <div class="text-center mb-10">
+            <h2 class="text-3xl font-black text-slate-900">
+              Request a Price Quote / Inquiry
+            </h2>
+            <p class="text-sm text-slate-500 mt-2">
+              Fill out your details below and our sales team will respond with a
+              custom quote within 24 hours.
+            </p>
+          </div>
+
+          <form onsubmit="handleMainContact(event)" class="space-y-6">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+                  >Full Name *</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="Dr. John Doe"
+                  class="w-full px-4 py-3.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+                  >Facility / Practice Name *</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="Apex Dental Clinic"
+                  class="w-full px-4 py-3.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900"
+                />
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+                  >Email Address *</label
+                >
+                <input
+                  type="email"
+                  required
+                  placeholder="doctor@clinic.com"
+                  class="w-full px-4 py-3.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+                  >Phone / WhatsApp Number *</label
+                >
+                <input
+                  type="tel"
+                  required
+                  placeholder="+1 (555) 000-0000"
+                  class="w-full px-4 py-3.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2"
+                >Details of Items Needed / Message *</label
+              >
+              <textarea
+                rows="4"
+                required
+                placeholder="Specify product quantities, brand preferences, or general inquiries..."
+                class="w-full px-4 py-3.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-gradient-to-r from-navy-900 to-teal-600 hover:from-navy-800 hover:to-teal-500 text-white font-bold py-4 rounded-xl text-sm transition-all shadow-lg shadow-teal-500/20 active:scale-98"
+            >
+              Submit Quote Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-navy-950 text-slate-400 text-sm py-16 border-t border-slate-800"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-10"
+      >
+        <div class="space-y-4">
+          <div class="flex items-center gap-2.5">
+            <div
+              class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center text-white font-bold"
+            >
+              i
+            </div>
+            <span class="text-xl font-bold text-white">identals</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Authorized suppliers of dental materials, clinical consumables, and
+            medical equipment.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-4 text-xs uppercase tracking-wider"
+          >
+            Quick Navigation
+          </h4>
+          <ul class="space-y-2.5 text-xs">
+            <li>
+              <a href="#home" class="hover:text-teal-400 transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#catalog" class="hover:text-teal-400 transition-colors"
+                >Dental Materials</a
+              >
+            </li>
+            <li>
+              <a
+                href="#specialties"
+                class="hover:text-teal-400 transition-colors"
+                >Medical Divisions</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="hover:text-teal-400 transition-colors"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-4 text-xs uppercase tracking-wider"
+          >
+            Contact & Support
+          </h4>
+          <ul class="space-y-2.5 text-xs">
+            <li>
+              <i class="fa-solid fa-envelope mr-2 text-teal-400"></i>
+              info@identals.com
+            </li>
+            <li>
+              <i class="fa-solid fa-phone mr-2 text-teal-400"></i> +1 (555)
+              123-4567
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot mr-2 text-teal-400"></i>
+              Medical District, Suite 100
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-4 text-xs uppercase tracking-wider"
+          >
+            Compliance
+          </h4>
+          <p class="text-xs text-slate-400 mb-3 leading-relaxed">
+            All products are stored and distributed in accordance with medical
+            supply standards.
+          </p>
+          <p class="text-xs text-slate-500">
+            &copy; 2026 identals. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Universal Product Inquiry Modal -->
+    <div
+      id="inquiry-modal"
+      class="fixed inset-0 bg-navy-950/70 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 transition-all"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl relative border border-slate-100 animate-scale-up"
+      >
+        <button
+          onclick="closeInquiryModal()"
+          class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 transition-colors"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h3
+          id="modal-title"
+          class="text-2xl font-extrabold text-slate-900 mb-1"
+        >
+          Request Product Quote
+        </h3>
+        <p id="modal-subtitle" class="text-xs text-slate-500 mb-6">
+          Send an instant inquiry for bulk pricing.
+        </p>
+
+        <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+          <input type="hidden" id="modal-product-name" value="" />
+          <div>
+            <label
+              class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1"
+              >Your Name / Clinic *</label
+            >
+            <input
+              type="text"
+              required
+              class="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1"
+              >Phone Number *</label
+            >
+            <input
+              type="tel"
+              required
+              class="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1"
+              >Estimated Quantity Needed</label
+            >
+            <input
+              type="text"
+              placeholder="e.g. 10 boxes / 5 units"
+              class="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-navy-900"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-navy-900 hover:bg-teal-600 text-white font-bold py-3 rounded-xl text-sm transition-colors shadow-md"
+          >
+            Send Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
