@@ -29,7 +29,7 @@ const productsData = [
     category: "endodontic",
     icon: "fa-code-branch",
     bgGradient: "from-teal-500/10 to-emerald-500/10",
-    iconColor: "text-teal-600",
+    iconColor: "text-teal-500",
     description:
       "Flexible nickel-titanium root canal shaping files with high resistance to fatigue.",
     specs: ["Lengths: 21mm, 25mm", "Pack: 6 files", "Autoclavable"],
@@ -77,7 +77,7 @@ const productsData = [
     category: "endodontic",
     icon: "fa-thumbtack",
     bgGradient: "from-teal-500/10 to-sky-500/10",
-    iconColor: "text-teal-600",
+    iconColor: "text-teal-500",
     description:
       "Hand-rolled uniform taper points for precise root canal obturation.",
     specs: ["Taper: .04 / .06", "Sizes: #15 - #40", "60 points/box"],
@@ -92,22 +92,22 @@ function renderProducts(items) {
   grid.innerHTML = items
     .map(
       (product) => `
-    <div class="product-card bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm relative group" data-category="${product.category}" data-name="${product.name.toLowerCase()}">
+    <div class="product-card bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs relative group" data-category="${product.category}" data-name="${product.name.toLowerCase()}">
       <div class="h-48 bg-gradient-to-br ${product.bgGradient} flex items-center justify-center relative overflow-hidden">
         <i class="fa-solid ${product.icon} ${product.iconColor} text-5xl group-hover:scale-110 transition-transform"></i>
-        <span class="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur text-navy-950 border border-slate-200/80 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">${product.category}</span>
+        <span class="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur text-navy-950 border border-slate-200/80 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-2xs">${product.category}</span>
       </div>
       <div class="p-6">
         <h3 class="font-bold text-slate-900 text-lg mb-1.5 group-hover:text-navy-900 transition-colors">${product.name}</h3>
         <p class="text-xs text-slate-500 mb-4 leading-relaxed">${product.description}</p>
-        <ul class="text-xs text-slate-600 space-y-1.5 mb-6 border-t border-slate-100 pt-3">
+        <ul class="text-xs text-slate-600 space-y-1.5 mb-6 border-t border-slate-100 pt-3 font-medium">
           ${product.specs.map((spec) => `<li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-teal-500 text-[10px]"></i> <span class="text-slate-700">${spec}</span></li>`).join("")}
         </ul>
         <div class="grid grid-cols-2 gap-2.5">
             <button onclick="openProductInquiry('${product.name}')" class="border border-navy-900/80 text-navy-900 hover:bg-navy-900 hover:text-white font-bold py-2.5 rounded-xl text-xs transition-all flex items-center justify-center gap-1.5">
                 <i class="fa-regular fa-paper-plane"></i> Quote
             </button>
-            <button onclick="sendWhatsAppInquiry('${product.name}')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs transition-all shadow-sm shadow-emerald-600/20 flex items-center justify-center gap-1.5">
+            <button onclick="sendWhatsAppInquiry('${product.name}')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs transition-all shadow-2xs flex items-center justify-center gap-1.5">
                 <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp
             </button>
         </div>
@@ -116,6 +116,15 @@ function renderProducts(items) {
   `,
     )
     .join("");
+}
+
+// Select Category via Link Click
+function selectCategoryFilter(category) {
+  const categoryFilter = document.getElementById("category-filter");
+  if (categoryFilter) {
+    categoryFilter.value = category;
+    filterProducts();
+  }
 }
 
 // Product Filtering
@@ -146,7 +155,7 @@ function filterProducts() {
 function sendWhatsAppInquiry(productName) {
   const phoneNumber = "1234567890"; // Replace with actual number
   const message = encodeURIComponent(
-    `Hello identals, I am interested in getting a price quote for: ${productName}. Please share pricing and stock details.`,
+    `Hello MediDosth, I am interested in getting a price quote for: ${productName}. Please share pricing and stock details.`,
   );
   window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
 }
