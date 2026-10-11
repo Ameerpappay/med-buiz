@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-ink;
+  }
+
+  ::selection {
+    @apply bg-clinical/10 text-clinical;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-ink placeholder-slate-400 transition-colors focus:border-clinical focus:outline-none focus:ring-2 focus:ring-clinical/20;
+  }
+
+  .input-label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wider text-slate-600;
+  }
+}
